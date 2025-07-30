@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #74ebd5, #acb6e5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.quiz-container {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.category-select {
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+#start-btn, #next-btn {
+  padding: 10px 20px;
+  margin: 15px auto;
+  font-size: 16px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#start-btn:hover, #next-btn:hover {
+  background-color: #45a049;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#options button:hover {
+  background-color: #dfe6e9;
+}
+
+#timer {
+  font-weight: bold;
+  color: #d63031;
+  margin-bottom: 10px;
+}
+
+#score-box {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Theme Toggle Button */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#theme-toggle:hover {
+  background-color: #555;
+}
+
+/* Dark Theme */
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+body.dark .quiz-container {
+  background: #1e1e1e;
+  color: #eee;
+}
+body.dark #start-btn,
+body.dark #next-btn,
+body.dark #theme-toggle {
+  background-color: #555;
+  color: #fff;
+}
+body.dark #start-btn:hover,
+body.dark #next-btn:hover,
+body.dark #theme-toggle:hover {
+  background-color: #777;
+}
+body.dark #options button {
+  background-color: #333;
+  color: #fff;
+}
+body.dark #options button:hover {
+  background-color: #444;
+}
+
+
+/* Progress Bar */
+#progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4CAF50;
+  transition: width 0.3s ease;
+}
+
+/* Confetti Canvas */
+#confetti-canvas {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+#progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem;
+  }
+
+  #question {
+    font-size: 1rem;
+  }
+
+  button, select {
+    font-size: 0.95rem;
+    padding: 8px 12px;
+  }
+
+  #score-box {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.8rem;
+    margin: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #question {
+    font-size: 0.95rem;
+  }
+
+  button, select {
+    font-size: 0.9rem;
+    padding: 7px 10px;
+  }
+
+  #score-box {
+    font-size: 1.1rem;
+  }
+}
